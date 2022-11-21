@@ -1,6 +1,6 @@
 import { memo } from 'react'
 
-import { arc } from 'd3'
+import * as d3 from 'd3'
 
 type IMouthProps = {
   mouthWidth: number
@@ -8,13 +8,18 @@ type IMouthProps = {
 }
 
 function Mouth({ mouthWidth, mouthRadius }: IMouthProps) {
-  const mounthArc = arc()
+  const mounthArc = d3
+    .arc()
     .innerRadius(mouthRadius)
     .outerRadius(mouthRadius + mouthWidth)
     .startAngle(Math.PI / 2)
     .endAngle((Math.PI * 3) / 2)
 
-  return <path d={String(mounthArc())} />
+  const string = String(mounthArc())
+
+  if (!string) return null
+
+  return <path d={string} />
 }
 
 export default memo(Mouth)

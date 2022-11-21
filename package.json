@@ -17,22 +17,16 @@
     "check-all": "yarn check-types && yarn check-lint && yarn check-prettier && yarn format"
   },
   "dependencies": {
-    "@types/react-simple-maps": "^1.0.8",
     "d3": "^7.6.1",
-    "leaflet": "^1.8.0",
     "next": "12.2.3",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-leaflet": "^4.0.1",
-    "react-simple-maps": "^3.0.0"
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@types/d3": "^7.4.0",
-    "@types/leaflet": "^1.7.11",
     "@types/node": "18.0.6",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
-    "@types/react-leaflet": "^2.8.2",
     "@typescript-eslint/eslint-plugin": "^5.30.7",
     "@typescript-eslint/parser": "^5.30.7",
     "autoprefixer": "^10.4.7",

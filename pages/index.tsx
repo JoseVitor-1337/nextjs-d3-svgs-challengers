@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
 
-import MapSVG from 'screens/MapSVG'
+import HomePage from 'screens/Home'
 
 const Home: NextPage = () => {
-  return <MapSVG />
+  return <HomePage />
 }
 
 export default Home
