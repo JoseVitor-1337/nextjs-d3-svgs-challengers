@@ -17,8 +17,9 @@ export default function ePage() {
 
   return (
     <div className="flex flex-wrap">
-      {array.map(() => (
+      {array.map((number) => (
         <Face
+          key={number}
           width={width}
           height={height}
           strokeWidth={strokeWidth + Math.random() * 2}

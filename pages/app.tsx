@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
 
-import SmileFace from 'screens/SmileFace'
+import Graph from 'screens/Graph'
 
 const Home: NextPage = () => {
-  return <SmileFace />
+  return <Graph />
 }
 
 export default Home
