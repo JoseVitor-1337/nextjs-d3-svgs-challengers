@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
 
-import Graph from 'screens/Graph'
+import Circle from 'screens/Circle'
 
 const Home: NextPage = () => {
-  return <Graph />
+  return <Circle />
 }
 
 export default Home
