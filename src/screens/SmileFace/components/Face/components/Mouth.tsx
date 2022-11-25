@@ -8,14 +8,14 @@ type IMouthProps = {
 }
 
 function Mouth({ mouthWidth, mouthRadius }: IMouthProps) {
-  const mounthArc = d3
+  const mounthArc: any = d3
     .arc()
     .innerRadius(mouthRadius)
     .outerRadius(mouthRadius + mouthWidth)
     .startAngle(Math.PI / 2)
     .endAngle((Math.PI * 3) / 2)
 
-  return <path d={String(mounthArc())} />
+  return <path d={mounthArc() || ''} />
 }
 
 export default memo(Mouth)
