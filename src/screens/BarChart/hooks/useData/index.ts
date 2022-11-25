@@ -9,7 +9,7 @@ export default function useData() {
 
   useEffect(() => {
     const row = (data: any) => {
-      data.Population = +data['2020']
+      data.Population = +data['2020'] * 1000
       return data
     }
     d3.csv(csvUrl, row).then((data: any) => {

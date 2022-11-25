@@ -6,10 +6,19 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.mark {
+  fill: #137880;
+}
+
 .tick line {
   stroke: #c0c0bb;
 }
 
 .tick text {
   fill: #635f5d;
+}
+
+.axis-label {
+  fill: #635f5d;
+  font-size: 1.5rem;
 }

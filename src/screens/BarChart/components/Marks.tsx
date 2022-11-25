@@ -6,6 +6,7 @@ type IMarksProps = {
   xScale: ScaleLinear<number, number, never>
   xValue: any
   yValue: any
+  tooltipFormat: (value: string) => string
 }
 
 export default function Marks({
@@ -14,17 +15,21 @@ export default function Marks({
   yScale,
   xValue,
   yValue,
+  tooltipFormat,
 }: IMarksProps) {
   return (
     <>
       {data.map((data) => (
         <rect
+          className="mark"
           key={yValue(data)}
           x={0}
           y={yScale(yValue(data))}
           width={xScale(xValue(data))}
           height={yScale.bandwidth()}
-        />
+        >
+          <title>{tooltipFormat(xValue(data))}</title>
+        </rect>
       ))}
     </>
   )

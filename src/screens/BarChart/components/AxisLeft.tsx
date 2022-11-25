@@ -13,7 +13,7 @@ export default function AxisLeft({ yScale }: IAxisLeftProps) {
             dx="-0.5rem"
             dy="0.5rem"
             style={{ textAnchor: 'end' }}
-            y={yScale(tickValue) || 0 + yScale.bandwidth() / 2}
+            y={Number(yScale(tickValue)) + yScale.bandwidth() / 2}
           >
             {tickValue}
           </text>
